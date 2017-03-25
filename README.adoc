@@ -3,4 +3,5 @@ Vorlagen für (La)TeX für Verschiedenes
 
 == Was für Vorlagen finde ich hier?
 
-- Altklausuren (Falls man ein Prüfunkprotokoll oder eine Klausur schreiben möchte)
+- Altklausuren (Falls man ein Prüfungsprotokoll oder eine Klausur schreiben möchte)
+- Bürozeitentabelle
