@@ -1,0 +1,107 @@
+\documentclass[a4paper, 11pt, oneside]{scrartcl}
+
+% -----------------------------------------------------------------------------
+% Hier bitte Daten eintragen
+% Zeilen von nicht passenden oder nicht vorhandenen Daten bitte löschen oder auskommentieren
+% generisches Feminin schließt selbstverständlich auch männliche Personen ein
+% -----------------------------------------------------------------------------
+\newcommand{\Titel}        {<Vorlesungsname>} % hier sinnvollen Namen wie Geometrie, Lineare Algebra, ...
+\newcommand{\Modul}        {<MODUL>} % hier die Modulbeschreibungsabkürzung wie GEO, ANAG, LAAG, HANA, ...
+\newcommand{\Prueferin}      {<Prüferin>}
+\newcommand{\Beisitzerin}    {<Beisitzerin>} % wenn unbekannt und bei schriftlichen Klausuren löschen
+\newcommand{\Kursassistenz}{<Kursassistentin>} % wenn unbekannt, zei mündlichen Prüfungen löschen
+\newcommand{\Semester}     {<WS 2016/ 17>} % oder SS 2017, ... oder WS/ SS 2016/ 17; das Semester in der die Vorlesung gehalten wurde
+\newcommand{\Zeit}         {<90 min>} % zeitliche Länge der Prüfung
+\newcommand{\Studiengang}  {<Kurzform>} % Ba Mathe, Ma Mathe, LA Gy, LA MS, LA BBS, LA GS, Dipl. Mathe
+\newcommand{\Hilfsmittel}  {<1 Seite handbeschrieben>} % was du in die Prüfung mitnehmen durftest
+% \newcommand{\weiteres}     {Infobezeichnung 1 & Wert 1\\
+                              % Infobezeichnung 2 & Wert 2} % wenn es weitere interessante Infos gibt, die oben stehen sollen
+  % hier auskommentiert, da die meisten Prüfungen mit den Daten oben auskommen sollten
+% 
+
+% -----------------------------------------------------------------------------
+% Diesen Teil musst du nicht ansehen. Er funktioniert halt.
+% Falls das Dokument bei dir nicht kompiliert, weil der Header Probleme macht,
+% ärgere dich nicht damit rum.
+% Sende uns einfach die .tex - Datei und wir fixen das.
+% -----------------------------------------------------------------------------
+
+\usepackage{ngerman, scrpage2, amsmath, amsthm,amssymb} %  calc,
+\usepackage[utf8]{inputenc}
+% \usepackage[pdftex, debugshow, final]{graphicx}
+\pagestyle{scrheadings}
+
+\begin{document}
+
+\footskip=1.5cm
+\oddsidemargin=.5cm
+\voffset=-1cm
+\topmargin=1cm
+\headsep=1cm 
+\linespread{1.3} 
+ 
+\chead{\sffamily Fachschaftsrat Mathematik - Prüfungsprotokoll}
+\setheadsepline{.5pt}
+\ofoot{\sffamily\thepage}
+\cfoot{\scriptsize Grammatikalisch
+feminine Formen von Personenbezeichnungen schließen alle Personen gleichermaßen
+ein.}
+\setfootsepline{.5pt}
+
+\begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+\hline
+  \begin{minipage}[c]{0.45\textwidth} %[4.2cm]
+  \vskip1em
+  \begin{center}
+    \textbf{\Large \ifdefined\Titel\Titel\else Vorlesungstitel eintragen!\fi} \\ \hrulefill % 
+  \end{center}
+  \begin{tabular*}{\linewidth}{l@{\extracolsep\fill}r}
+    \ifdefined\Modul Modul:&\Modul\\\fi
+    \ifdefined\Prueferin Prüferin:&\Prueferin\\\fi
+    \ifdefined\Beisitzerin Beisitzerin:&\Beisitzerin\\\fi
+    \ifdefined\Kursassistentin Kursassistenz:&\Kursassistenz\\\fi
+    \ifdefined\Semester Semester:&\Semester\\\fi
+    \ifdefined\Zeit Zeit:&\Zeit\\\fi
+    \ifdefined\Studiengang Studiengang:&\Studiengang\\\fi
+    \ifdefined\Note Note:&\Note\\\fi
+    \end{tabular*}
+  \end{minipage}
+  &
+   \begin{minipage}[c]{0.45\textwidth} %[4.2cm] [\ht\infobox+\dp\infobox]
+   \vskip0.5em
+    \linespread{1} \scriptsize Liebe Leserin dieses Protokolls!\\
+    Die Protokolle des $\mu$FSR dürfen nur unverändert weitergegeben werden. Falls du Fehler finden solltest oder Verbesserungsvorschläge hast, dann schicke bitte eine E-Mail an {\sffamily klausur@myfsr.de}. Bitte unterstütze diesen Service des $\mu$FSR und schreibe ebenfalls ein Prüfungsprotokoll nach deiner Prüfung. Du kannst dabei entweder eine Textdatei oder (wenn du uns Arbeit abnehmen möchtest) eine \LaTeX-Datei schicken. Den Link zur Vorlage findest du auf {\sffamily myfsr.de}\\
+    \rightline{Vielen Dank: Euer $\mu$FSR}\\
+  \end{minipage}\\
+  \hline
+\end{tabular}
+\vskip0.5em
+
+\ifdefined\Hilfsmittel Erlaubte Hilfsmittel: \Hilfsmittel.\fi
+
+% -----------------------------------------------------------------------------
+% Ende des Headers
+% Ab hier schreibst du deinen Text.
+% Du kannst den untenstehenden Vorschlag zur Gliederung übernehmen, wenn er in etwa der Prüfung entspricht.
+% -----------------------------------------------------------------------------
+
+\begin{enumerate}
+  \item Aufgabentext der ersten Aufgabe. Nummerierung passiert automatisch.
+  \begin{enumerate}
+    \item Aufgabenteil a) der ersten Aufgabe. Nummerierung mit a), b), ... passiert automatisch.
+    \begin{align*}
+      \int_a^b \frac {\sin x}x dx = \text{?}
+    \end{align*}
+  \end{enumerate}
+\end{enumerate}
+
+\section*{Ein Thema}
+Bei kombinierten Prüfungen ist es meist sinnvoll diese mit sections zu trennen.
+\begin{itemize}
+  \item Der eine wichtige Satz.
+  \item Der andere wichtige Satz.
+\end{itemize}
+
+\section*{Eindruck}
+Gerade bei mündlichen Prüfungen ist es meist am interessantesten zu lesen, wie die Prüferin so ist, welche Atmosphäre in der Prüfung herrscht und was ihr wichtig ist.
+\end{document}
