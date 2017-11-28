@@ -27,7 +27,7 @@
 % Sende uns einfach die .tex - Datei und wir fixen das.
 % -----------------------------------------------------------------------------
 
-\usepackage{ngerman, scrpage2, amsmath, amsthm,amssymb} %  calc,
+\usepackage{csquotes, ngerman, scrpage2, amsmath, amsthm,amssymb} %  calc,
 % \usepackage[pdftex, debugshow, final]{graphicx}
 \pagestyle{scrheadings}
 
@@ -80,6 +80,7 @@ ein.}
 
 \ifdefined\Hilfsmittel Erlaubte Hilfsmittel: \Hilfsmittel.\fi
 
+\newcommand{\points}{[\textbf{#1}]}
 % -----------------------------------------------------------------------------
 % Ende des Headers
 % Ab hier schreibst du deinen Text.
@@ -89,7 +90,7 @@ ein.}
 \begin{enumerate}
   \item Aufgabentext der ersten Aufgabe. Nummerierung passiert automatisch.
   \begin{enumerate}
-    \item Aufgabenteil a) der ersten Aufgabe. Nummerierung mit a), b), ... passiert automatisch.
+    \item \points{3} Aufgabenteil a) der ersten Aufgabe. Nummerierung mit a), b), ... passiert automatisch. Dieser Aufgabenteil bringt 3 Punkte.
     \begin{align*}
       \int_a^b \frac {\sin x}x dx = \text{?}
     \end{align*}
