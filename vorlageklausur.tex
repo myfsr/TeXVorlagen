@@ -4,7 +4,6 @@
 % -----------------------------------------------------------------------------
 % Hier bitte Daten eintragen
 % Zeilen von nicht passenden oder nicht vorhandenen Daten bitte löschen oder auskommentieren
-% generisches Feminin schließt selbstverständlich auch männliche Personen ein
 % -----------------------------------------------------------------------------
 \newcommand{\Titel}        {<Vorlesungsname>} % hier sinnvollen Namen wie Geometrie, Lineare Algebra, ...
 \newcommand{\Modul}        {<MODUL>} % hier die Modulbeschreibungsabkürzung wie GEO, ANAG, LAAG, HANA, ...
@@ -43,10 +42,7 @@
  
 \chead{\sffamily Fachschaftsrat Mathematik - Prüfungsprotokoll}
 \setheadsepline{.5pt}
-\ofoot{\sffamily\thepage}
-\cfoot{\scriptsize Grammatikalisch
-feminine Formen von Personenbezeichnungen schließen alle Personen gleichermaßen
-ein.}
+% \ofoot{\sffamily\thepage}
 \setfootsepline{.5pt}
 
 \begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
@@ -58,7 +54,7 @@ ein.}
   \end{center}
   \begin{tabular*}{\linewidth}{l@{\extracolsep\fill}r}
     \ifdefined\Modul Modul:&\Modul\\\fi
-    \ifdefined\Prueferin Prüferin:&\Prueferin\\\fi
+    \ifdefined\Prueferin Prüfer:in:&\Prueferin\\\fi
     \ifdefined\Beisitzerin Beisitzerin:&\Beisitzerin\\\fi
     \ifdefined\Kursassistenz Kursassistenz:&\Kursassistenz\\\fi
     \ifdefined\Semester Semester:&\Semester\\\fi
